@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ChoiceActivity">
+
+    <LinearLayout
+        android:id="@+id/bot"
+        android:layout_width="607dp"
+        android:layout_height="20dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="607dp"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <Button
+        android:id="@+id/Exitbutton"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center|center_vertical"
+        android:onClick="BackButton"
+        android:text="Назад"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F80000"
+        app:icon="@drawable/abc_vector_test"
+
+        app:iconGravity="textStart"
+        app:iconPadding="6dp"
+        app:iconSize="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addbutton" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="36dp"
+        android:background="#000000"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/Descr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title2" />
+
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FA0A"
+        android:text="Добавить в заказ"
+        android:onClick="onAdd"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#15B11C"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <TextView
+        android:id="@+id/Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="352dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Descr">
+
+        <Button
+            android:id="@+id/less"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="-"
+            android:onClick="onMinus"
+            android:textSize="46sp"
+            app:backgroundTint="#FA0000" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="#FFFCFC"
+            android:drawableBottom="@android:drawable/button_onoff_indicator_off"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FF0A"
+            android:gravity="center"
+            android:onClick="onPlus"
+            android:text="+"
+            android:textSize="46sp"
+            app:backgroundTint="#14B51B"
+            app:iconTint="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
